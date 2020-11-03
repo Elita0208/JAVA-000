@@ -1,18 +1,17 @@
-package com.myself.http;
+package java0.nio01;
 
 import java.io.*;
-import java.net.Socket;
 import java.nio.CharBuffer;
 
 import okhttp3.*;
 
-class OKHttpClient {
+class MyOkHttpClient {
     public static void main(String[] args) throws IOException {
         OkHttpClient okHttpClient = new OkHttpClient();
 
         Request build = new Request.Builder()
                 .get()
-                .url("http://localhost:8801")
+                .url("http://localhost:8888")
                 .addHeader("Connection", "close")
                 .build();
 
@@ -22,7 +21,7 @@ class OKHttpClient {
             throw new IOException("Unexpected code " + response);
         }
         Reader reader = response.body().charStream();
-        CharBuffer buf = CharBuffer.allocate(10);
+        CharBuffer buf = CharBuffer.allocate(100);
         reader.read(buf);
 
         buf.flip();
@@ -31,5 +30,6 @@ class OKHttpClient {
         System.out.println(dst);
 
     }
+
 }
 
