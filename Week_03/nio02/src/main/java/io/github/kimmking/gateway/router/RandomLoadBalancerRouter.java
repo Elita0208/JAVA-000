@@ -13,6 +13,4 @@ public class RandomLoadBalancerRouter implements HttpEndpointRouter{
         int slot = nextInt % size;
         return endpoints.get(slot);
     }
-
-
 }

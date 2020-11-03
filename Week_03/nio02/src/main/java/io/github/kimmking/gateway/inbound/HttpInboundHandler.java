@@ -57,5 +57,5 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
             ReferenceCountUtil.release(msg);
         }
     }
-    
+
 }
