@@ -1,6 +1,9 @@
+package com.example.demo;
+
+
 import java.math.BigDecimal;
-import java.sql.*;
-import java.util.Random;
+        import java.sql.*;
+        import java.util.Random;
 
 public class InsertData {
 
@@ -240,7 +243,7 @@ public class InsertData {
 
     //4、事务+批处理， 220957ms => 220.957s => 3.68min
     public static void insertData4(){
-        String url = "jdbc:mysql://localhost:3306/test1" ;
+        String url = "jdbc:mysql://localhost:3308/test1" ;
         String user = "root" ;
         String password = "12345678" ;
 

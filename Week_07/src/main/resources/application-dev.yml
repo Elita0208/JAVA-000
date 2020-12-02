@@ -1,0 +1,20 @@
+server:
+  port: 8089
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  datasource:
+    master:
+      url: jdbc:mysql://127.0.0.1:3308/test1?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+    slave:
+      jdbc-url: jdbc:mysql://127.0.0.1:3308/test1?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver

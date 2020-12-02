@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iclick.insight.dao.GoalDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.model.User">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+        <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+        <result column="gender" jdbcType="INTEGER" property="gender" />
+        <result column="city" jdbcType="VARCHAR" property="city" />
+        <result column="province" jdbcType="VARCHAR" property="province" />
+
+    </resultMap>
+
+    <select id="getAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        id, name, gender, city, province
+        from user
+    </select>
+
+
+</mapper>
